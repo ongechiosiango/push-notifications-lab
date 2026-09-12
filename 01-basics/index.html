@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 — Notification Basics</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 640px;
+            margin: 60px auto;
+            padding: 20px;
+            background: #f7f9fc;
+            color: #1a1a1c;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #5a5f66;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e8ecf1;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #0984e3;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0;
+            transition: background 0.2s;
+        }
+        button:hover { background: #0873c7; }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 12px 16px;
+            background: #e1f0fa;
+            border-left: 4px solid #0984e3;
+            font-size: 14px;
+            font-family: monospace;
+        }
+        .note {
+            font-size: 13px;
+            color: #8f9296;
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff8e1;
+            border-left: 3px solid #fdcb6e;
+        }
+    </style>
+</head>
+<body>
+    <h1>01 — Notification Basics</h1>
+    <p class="subtitle">
+        Click the button below to request permission and show a notification.
+        This uses only the raw Notification API.
+    </p>
+
+    <div class="card">
+        <button id="notifyBtn">Show Notification</button>
+        <div id="status">Status: waiting for click…</div>
+    </div>
+
+    <div class="note">
+        <strong>Note:</strong> This page must be served over HTTPS or <code>localhost</code>.
+        Open the browser console to see detailed logs.
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
